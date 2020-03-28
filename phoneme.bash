@@ -12,7 +12,6 @@ mkdir -p $OUTDIR_OPENJTALK
 mkdir -p $TMPDIR
 
 # install libraries
-pip install git+https://github.com/Hiroshiba/openjtalk-label-getter@f355987682009da22ec812b2a56a438d68fcbce6
 pip install git+https://github.com/Hiroshiba/julius4seg@0e01f546bf4aa1329c9ee7a39df8630c066e63e3
 
 # get file names

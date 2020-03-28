@@ -38,7 +38,10 @@ JVSコーパス内にある日本語テキストを元に、以下の修正を�
 [aligned_labels_openjtalk](./aligned_labels_openjtalk/)がOpenJTalk音素系列ラベルです。
 
 Julius音素系列をOpenJTalk用に変更しました。
-長音符の扱いを変え、Julius用の音素（`a:`など）をOpenJTalk用の音素（`a a`など）に変更してからJuliusでアライメントしました。
+[OpenJTalk label getter](https://github.com/Hiroshiba/openjtalk-label-getter/tree/6435aa49dcfc9b06160f61552043a9a01ab9f359)を用いてOpenJTalk用の音素を取得し、一部を修正しました。
+変更後の音素が[voiceactoress100_phoneme_openjtalk](voiceactoress100_phoneme_openjtalk.txt)です。
+
+その後、音素をJulius用のものに変換し、Juliusのmonophone音素モデルを用いて音素をアライメントしました。
 
 実行コードは[phoneme.bash](./phoneme.bash)です。
 
