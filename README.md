@@ -32,7 +32,7 @@ JVSコーパス内にある日本語テキストを元に、以下の修正を�
 テキスト[voiceactoress100_spaced_julius.txt](voiceactoress100_spaced_julius.txt)を音素系列にし、Juliusのmonophone音素モデルを用いて音素をアライメントしました。
 この際、ショートポーズ`sp`の有無もJuliusで推定しました。
 
-実行コードは[phoneme.bash](./phoneme.bash)です。
+実行環境はdocker imageの[`hiroshiba/hiho-docker-base:audio-v7.3`](https://hub.docker.com/r/hiroshiba/hiho-docker-base/tags?name=audio-v7.3)、実行コードは[phoneme.bash](./phoneme.bash)です。
 
 ### OpenJTalk音素系列ラベルに関して
 [aligned_labels_openjtalk](./aligned_labels_openjtalk/)がOpenJTalk音素系列ラベルです。
@@ -41,9 +41,9 @@ Julius音素系列をOpenJTalk用に変更しました。
 [OpenJTalk label getter](https://github.com/Hiroshiba/openjtalk-label-getter/tree/6435aa49dcfc9b06160f61552043a9a01ab9f359)を用いてOpenJTalk用の音素を取得し、一部を修正しました。
 変更後の音素が[voiceactoress100_phoneme_openjtalk](voiceactoress100_phoneme_openjtalk.txt)です。
 
-その後、音素をJulius用のものに変換し、Juliusのmonophone音素モデルを用いて音素をアライメントしました。
+その後、音素をJulius用のものに変換し、Juliusのdnnモデルを用いて音素をアライメントしました。
 
-実行コードは[phoneme.bash](./phoneme.bash)です。
+実行環境はdocker imageの[`hiroshiba/hiho-docker-base:audio-v7.3`](https://hub.docker.com/r/hiroshiba/hiho-docker-base/tags?name=audio-v7.3)、実行コードは[phoneme.bash](./phoneme.bash)です。
 
 ## ライセンス
 ### 使用ライブラリに関して
